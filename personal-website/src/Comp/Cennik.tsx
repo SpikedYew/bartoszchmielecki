@@ -6,11 +6,13 @@ interface DataProps {
   desc: string;
 }
 const data: DataProps[] = [
-  { name: "Telesystem Spj", href: "", desc: "Description for Telesystem Spj" },
-  { name: "MFC STUDIO", href: "", desc: "Description for MFC STUDIO" },
-  { name: "Studio Uszko", href: "", desc: "Description for Studio Uszko" },
-  { name: "kolorowanko", href: "", desc: "Some other description" },
-  { name: "Yet Another Studio", href: "", desc: "More info about this" },
+  {
+    name: "Wizytówka",
+    href: "",
+    desc: "Description for Telesystem Spj",
+  },
+  { name: "Rozkręcenie", href: "", desc: "Description for MFC STUDIO" },
+  { name: "Sklep", href: "", desc: "Description for Studio Uszko" },
 ];
 
 export default function Realizacje() {
@@ -39,17 +41,17 @@ export default function Realizacje() {
         id="1"
         className="flex flex-col items-center justify-center text-5xl font-semibold"
       >
-        <h1 className="w-[620px] mx-auto">Realizacje</h1>
+        <h1 className="w-[620px] mx-auto">Cennik</h1>
         <div className="mt-[100px] mb-[100px] max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {data.map((item, index) => (
               <div
                 key={index}
                 onClick={() => setSelectedIndex(index)}
-                className="cursor-pointer md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px] shadow-md p-4 m-2 transition-all hover:shadow-lg"
+                className="cursor-pointer md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[450px] shadow-md p-4 m-2 transition-all hover:shadow-lg"
               >
                 <h2 className="text-xl uppercase text-center">{item.name}</h2>
-                {/* <p>{item.img}</p> */}
+                <p className="text-sm">{item.desc}</p>
               </div>
             ))}
           </div>

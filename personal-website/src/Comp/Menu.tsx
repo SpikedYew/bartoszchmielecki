@@ -1,7 +1,7 @@
 export default function Menu() {
   return (
     <>
-      <div className="w-[25vw] h-screen shadow-2xl flex-col sticky top-0 flex items-center justify-center">
+      <div className="w-[350px] h-screen shadow-2xl flex-col sticky top-0 hidden items-center justify-center md:flex">
         <div className="flex flex-col">
           <h1 className="text-2xl font-bold mb-2">Menu</h1>
           <ul>

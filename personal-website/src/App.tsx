@@ -2,6 +2,8 @@ import "./App.css";
 import { Instagram, Facebook } from "lucide-react";
 import Menu from "./Comp/Menu";
 import Realizacje from "./Comp/Realizacje";
+import Cennik from "./Comp/Cennik";
+// import ParticlesComponent from "./Comp/Particles";
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
             </div>
           </div>
           <Realizacje />
+          <Cennik />
         </div>
       </div>
     </>

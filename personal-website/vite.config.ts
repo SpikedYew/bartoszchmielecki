@@ -1,13 +1,10 @@
-
-import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
-  plugins: [
-    tailwindcss(),
-  ],
-   server: {
+  plugins: [tailwindcss()],
+  server: {
     allowedHosts: [
-      '5173-spikedyew-bartoszchmiel-fst5coldqaf.ws-eu118.gitpod.io',
+      "5173-spikedyew-bartoszchmiel-fst5coldqaf.ws-eu118.gitpod.io",
     ],
   },
-})
+});
