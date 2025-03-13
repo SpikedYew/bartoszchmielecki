@@ -11,17 +11,21 @@ function App() {
       <div className="flex flex-row">
         <Menu />
         <div className="flex flex-col w-full">
-          <div className=" h-[100vh] flex flex-col items-center justify-center text-7xl font-semibold">
-            <div className="w-[620px]">
+          <div className=" h-[100vh] flex flex-col md:items-center justify-center text-5xl md:text-6xl lg:text-7xl font-semibold">
+            <img
+              src="/img/bartosz.jpg"
+              className="h-[350px] w-[350px] mx-auto mb-4 rounded-lg shadow-xl"
+            ></img>
+            <div className="p-4 md:p-0 md:w-[620px]">
               <h1>Bartosz Chmielecki</h1>
-              <h2 className="text-3xl mt-5">
+              <h2 className="text-2xl md:text-3xl mt-5">
                 Strony Internetowe generujące zasięgi
               </h2>
             </div>
-            <div className="flex h-[100px] w-[620px] items-center ">
+            <div className=" p-4 md:p-0 flex h-[100px] md:w-[620px] items-center ">
               {" "}
-              <Instagram className="mr-12 transition-all hover:mb-4" />
-              <Facebook className="mr-12 transition-all hover:mb-4" />
+              <Instagram className="mr-12 cursor-pointer transition-all hover:-translate-y-2" />
+              <Facebook className="mr-12 cursor-pointer transition-all hover:-translate-y-2" />
             </div>
           </div>
           <Realizacje />

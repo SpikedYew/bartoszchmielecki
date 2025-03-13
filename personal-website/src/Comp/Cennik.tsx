@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 interface DataProps {
   name: string;
@@ -16,12 +16,12 @@ const data: DataProps[] = [
 ];
 
 export default function Realizacje() {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  // const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   return (
     <>
       {/* Popup Modal */}
-      {selectedIndex !== null && (
+      {/* {selectedIndex !== null && (
         <div className="fixed inset-0 flex items-center justify-center bg-[#00000028]">
           <div className="bg-white p-6 rounded-lg shadow-lg w-[400px]">
             <h2 className="text-2xl font-bold">{data[selectedIndex].name}</h2>
@@ -34,21 +34,21 @@ export default function Realizacje() {
             </button>
           </div>
         </div>
-      )}
+      )} */}
 
       {/* Main Content */}
       <div
         id="1"
         className="flex flex-col items-center justify-center text-5xl font-semibold"
       >
-        <h1 className="w-[620px] mx-auto">Cennik</h1>
+        <h1 className="md:w-[620px] mx-auto">Cennik 💵</h1>
         <div className="mt-[100px] mb-[100px] max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {data.map((item, index) => (
               <div
                 key={index}
-                onClick={() => setSelectedIndex(index)}
-                className="cursor-pointer md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[450px] shadow-md p-4 m-2 transition-all hover:shadow-lg"
+                // onClick={() => setSelectedIndex(index)}
+                className=" md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[450px] shadow-md p-4 m-2 transition-all hover:shadow-lg"
               >
                 <h2 className="text-xl uppercase text-center">{item.name}</h2>
                 <p className="text-sm">{item.desc}</p>
