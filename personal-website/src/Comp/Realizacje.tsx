@@ -8,35 +8,50 @@ interface DataProps {
   desc: string;
   img1: string;
   img2: string;
+  alt1: string;
+  alt2: string;
+  link: string;
 }
 const data: DataProps[] = [
   {
     name: "Telesystem Spj",
     img0: "",
-    desc: "Cntrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
+    desc: "Nowoczesna strona internetowa oparta na WordPress. Szybka, responsywna i zoptymalizowana pod SEO. Intuicyjny design i łatwa edycja treści.",
     img1: "/img/telesystem-pion.png",
+    alt1: "Projekt strony internetowej Telesystem Sp. j. – responsywny design w WordPress",
     img2: "/img/telesystem-poz.png",
+    alt2: "Strona Telesystem Sp. j. – nowoczesny układ i intuicyjna nawigacja",
+    link: "https://telesystemspj.pl/",
   },
   {
     name: "MFC STUDIO",
     img0: "",
-    desc: "Description for MFC STUDIO",
+    desc: "Strona internetowa stworzona w czystym HTML, CSS i JavaScript. Lekka, szybka i w pełni responsywna, z nowoczesnym designem i zoptymalizowanym kodem.",
     img1: "/img/mfcstudio-pion.png",
+    alt1: "Realizacja strony MFC Studio – lekki kod HTML, CSS i JavaScript",
     img2: "/img/mfcstudio-poziom.png",
+    alt2: "Nowoczesna strona MFC Studio – szybka i zoptymalizowana",
+    link: "https://www.mfcstudio.pl/",
   },
   {
     name: "Studio Uszko",
     img0: "",
-    desc: "Description for Studio Uszko",
+    desc: "Strona stworzona w React (Vite) + TypeScript + Tailwind CSS. Szybka, nowoczesna i responsywna, z CMS opartym na Google Sheets do łatwej edycji oferty.",
     img1: "/img/studiouszko-pion.png",
+    alt1: "Projekt strony Studio Uszko – React, TypeScript i Tailwind CSS",
     img2: "/img/studiouszko-poz.png",
+    alt2: "Strona Studio Uszko z CMS opartym na Google Sheets – dynamiczna i responsywna",
+    link: "https://studiouszko.pl/",
   },
   {
-    name: "kolorowanko",
+    name: "Kolorowanko",
     img0: "",
-    desc: "Some other description",
+    desc: "Sklep internetowy oparty na WordPress + WooCommerce, zintegrowany z systemem płatności Stripe. Szybki, responsywny i zoptymalizowany pod sprzedaż online.",
     img1: "/img/kolorowanko-pion.png",
+    alt1: "Sklep internetowy Kolorowanko – WooCommerce i Stripe na WordPress",
     img2: "/img/kolorowanko-poz.png",
+    alt2: "Realizacja e-commerce Kolorowanko – nowoczesny sklep online",
+    link: "https://bartoszchmielecki.eu/",
   },
 ];
 
@@ -55,25 +70,32 @@ export default function Realizacje() {
             viewport={{ once: true }}
             className="fixed inset-0 flex items-center justify-center z-20 bg-[#00000028]"
           >
-            <div className="bg-white w-6xl h-4xl p-6 rounded-lg shadow-lg ">
-              <div className="flex flex-row">
+            <div className="bg-white w-[90vw] h-auto md:w-6xl md:h-4xl p-6 rounded-lg shadow-lg ">
+              <div className="flex flex-col md:flex-row">
                 <div>
                   <h2 className="text-2xl font-bold uppercase">
                     {data[selectedIndex].name}
                   </h2>
-                  <p className="mt-3 text-gray-700 w-[400px]">
+                  <p className="mt-3 text-gray-700 w-auto md:w-[400px]">
                     {data[selectedIndex].desc}
                   </p>
                   <img
+                    alt={data[selectedIndex].alt1}
                     src={data[selectedIndex].img1}
-                    className="w-[222px] rounded-sm mx-auto mt-5 h-[480px] shadow-xl"
+                    className="w-[55px] h-[120px] md:w-[222px] rounded-sm mx-auto mt-5 md:h-[480px] shadow-xl"
                   ></img>
                 </div>
                 <div className="w-full">
                   <img
+                    alt={data[selectedIndex].alt2}
                     src={data[selectedIndex].img2}
-                    className="md:w-[660px]  rounded-sm mx-auto mt-5 h-[360px] shadow-xl"
+                    className="w-[330px] h-[180px] md:w-[660px]  rounded-sm mx-auto mt-5 md:h-[360px] shadow-xl"
                   ></img>
+                  <p className="text-center mt-4 hover:underline">
+                    <a href={data[selectedIndex].link} target="_blank">
+                      Link do strony
+                    </a>
+                  </p>
                 </div>
               </div>
               <button
@@ -89,7 +111,7 @@ export default function Realizacje() {
 
       {/* Main Content */}
       <div
-        id="1"
+        id="realizacje"
         className="flex flex-col items-center justify-center text-5xl font-semibold"
       >
         <motion.h1
@@ -113,7 +135,7 @@ export default function Realizacje() {
               <div
                 key={index}
                 onClick={() => setSelectedIndex(index)}
-                className="cursor-pointer md:w-[200px] md:h-[150px] lg:w-[300px] bg-gray-100 text-black rounded-sm lg:h-[250px] shadow-md p-4 m-2 transition-all hover:shadow-lg hover:-translate-y-2"
+                className="w-[90vw] cursor-pointer md:w-[200px] md:h-[200px] lg:w-[300px] bg-gray-100 text-black rounded-sm lg:h-[250px] shadow-md p-4 m-2 transition-all hover:shadow-lg hover:-translate-y-2"
               >
                 <img
                   src={item.img2}
